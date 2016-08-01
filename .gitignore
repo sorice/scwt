@@ -1,0 +1,11 @@
+*.pyc
+*~
+*.orig
+*.*#
+*.bak
+*.gz
+*.directory
+*.m
+*.sh
+/html/bootstrap
+pinegrow.json
