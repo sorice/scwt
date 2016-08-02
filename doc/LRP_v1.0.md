@@ -1,5 +1,6 @@
 # RC v1.0 SantaClaraWalkingTour.com
-**Lista reserva**
+**Lista de Reserva**
+
 * [Todo List](#todo)
 * [Done List](#done)
 * [Future features](#future)

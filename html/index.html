@@ -28,6 +28,9 @@
         <link href="assets/css/owl.theme.css" rel="stylesheet"> 
         <link href="assets/css/style.css" rel="stylesheet"> 
         <link href="assets/css/animate.css" rel="stylesheet"> 
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
         <!-- Magnific Popup core CSS file -->         
         <link rel="stylesheet" href="assets/css/magnific-popup.css"> 
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
@@ -46,34 +49,97 @@
     </head>
     
     <body id="home"> 
-        <!-- Preloader -->         
-        <div id="preloader"> 
-            <div id="status"></div>             
-        </div>         
-        <!-- FullScreen -->         
-        <div class="intro-header"> 
-            <div class="col-xs-12 text-center abcen1"> 
-                <h2 class="h2_home wow fadeIn text-center" data-wow-delay="0.4s">Santa Clara Walking Tour</h2> 
-                <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Guiding &amp; managing your travel for free</h3> 
-                <ul class="list-inline intro-social-buttons"> 
-                    <li>
-                        <a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a> 
-                    </li>                     
-                    <li id="download">
-                        <a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a> 
-                    </li>                     
-                </ul>                 
-            </div>             
-            <!-- /.container -->             
-            <div class="col-xs-12 text-center abcen wow fadeIn"> 
-                <div class="button_down "> 
-                    <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s" href="#offers"> 
-                        <img class="img_scroll" src="assets/img/icon/circle.png" alt=""> 
-                    </a>                     
-                </div>                 
-            </div>             
-        </div>         
-        
+        <section id="main-slider" class="no-margin">         
+            <!-- Corlate carrusel -->                     
+            <div class="carousel slide">
+                <div class="col-xs-12 text-center abcen1"> 
+                    <h2 class="h2_home wow fadeIn text-center" data-wow-delay="0.4s">Santa Clara Walking Tour</h2> 
+                    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Guiding &amp; managing your travel for free</h3> 
+                </div>             
+                <!-- /.container -->             
+                <div class="col-xs-12 text-center abcen wow fadeIn"> 
+                    <div class="button_down "> 
+                        <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s" href="#offers"> 
+                            <img class="img_scroll" src="assets/img/icon/circle.png" alt=""> 
+                        </a>                     
+                    </div>                 
+                </div>        
+                <ol class="carousel-indicators">
+                    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                    <li class="" data-target="#main-slider" data-slide-to="1"></li>
+                    <li class="" data-target="#main-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+
+                    <div class="item active" style="background-image: url(assets/img/slider/bg1.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="assets/img/slider/img1.png" class="img-responsive">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--/.item-->
+
+                    <div class="item" style="background-image: url(assets/img/slider/bg2.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="assets/img/slider/img2.png" class="img-responsive">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--/.item-->
+
+                    <div class="item" style="background-image: url(assets/img/slider/bg3.jpg)">
+                        <div class="container">
+                            <div class="row slide-margin">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                        <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                        <a class="btn btn-info btn-embossed btn-slide animation animated-item-3" href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                    <div class="slider-img">
+                                        <img src="assets/img/slider/img3.png" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.item-->
+                </div><!--/.carousel-inner-->
+            </div><!--/.carousel-->
+            <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="next hidden-xs" href="#main-slider" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </section><!--/#main-slider-->
         <!-- NavBar-->         
         <nav class="navbar-default" role="navigation"> 
             <div class="container"> 
@@ -463,6 +529,12 @@
         <script src="assets/js/uiMorphingButton_inflow.js"></script>             
         
         <!-- Magnific Popup core JS file -->             
-        <script src="assets/js/jquery.magnific-popup.js"></script>             
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+            <script src="js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.prettyPhoto.js"></script>
+        <script src="assets/js/jquery.isotope.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/wow.min.js"></script>
     </body>     
 </html>
