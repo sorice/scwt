@@ -27,7 +27,7 @@ Original text of [Creative Commons BY-NC-SA](http://creativecommons.org/licenses
 
 ## Acknowledgment to: {#acknowledgment}
 
-Flatfy Theme made by [Andrea Galanti](http://www.andreagalanti.it/flatfy.php), Creative Commons Non Commercial Use.
+Flatfy Theme made by [Andrea Galanti](http://www.andreagalanti.it/flatfy.php), Creative Commons - Non Commercial Use.
 
 ### Snippets
 
