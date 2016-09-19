@@ -1,0 +1,59 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.section-container {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.social-link {
+    margin: 30px;
+}
+
+a {
+    color: inherit;
+}
+
+#overview {
+    padding-top: 50px;
+}
+
+#carousel1 {
+    margin-top: 80px;
+}
+
+#navbar {
+    padding: 15px 15px;
+    box-shadow: 0 4px 5px -3px #ececec;
+    background-color: white;
+}
+
+.nav > li > a {
+    text-transform: uppercase;
+}
+
+.nav > li > a, .navbar-brand {
+    color: gray;
+    font-weight: bold;
+
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+    border-radius: 3px;
+}
+
+.navbar-toggle {
+    background-color: #d6d6ea;
+}
+
+.navbar-toggle > span {
+    background-color: white;
+}
