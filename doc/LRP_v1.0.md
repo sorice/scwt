@@ -9,6 +9,7 @@
 ## Future {#future}
 - logo
 - Backend para Yanet agregar experiences, y Testimonials.
+- buscar CubaWalkingTours.com a ver si está cogido.
 
 ## To Do List {#todo}
 * MONTAR página Tours _P, Abel_

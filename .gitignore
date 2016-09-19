@@ -7,6 +7,6 @@
 *.directory
 *.m
 *.sh
-/html/bootstrap
 pinegrow.json
 /fotos
+/doc/TO_Leonel.txt
