@@ -18,301 +18,306 @@
         <link href="assets/css/carousel.css" rel="stylesheet">
         <link href="assets/css/scwt.css" rel="stylesheet" type="text/css">
         <link href="assets/css/animate.css" rel="stylesheet" type="text/css">
+        <link href="font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
     </head>
     <!-- NAVBAR
 ================================================== -->
     <body>
-        <nav class="navbar navbar-fixed-top" id="navbar">
-            <div class="container-fluid">
-                <div class="navbar-header animated fadeInDown">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">SantaClaraWalkingTour</a>
+        <div class="container">
+            <nav class="navbar navbar-static-top" id="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header animated fadeInDown">
+                        <button class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">SantaClaraWalkingTour</a>
+                    </div>
+                    <div class="collapse navbar-collapse animated fadeInDown" id="nav1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#overview">Home</a>
+                            </li>
+                            <li>
+                                <a href="#experiences">Stories</a>
+                            </li>
+                            <li>
+                                <a href="#friends">Friends</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse animated fadeInDown" id="nav1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#overview">Home</a>
-                        </li>
-                        <li>
-                            <a href="#experiences">Stories</a>
-                        </li>
-                        <li>
-                            <a href="#friends">Friends</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
+            </nav>
+            <div id="carousel1" class="carousel slide section-container hidden-xs" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel1" data-slide-to="1"></li>
+                    <li data-target="#carousel1" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="assets/imgs/carousel/Santa_Clara2a.png" alt="" class="img-responsive" />
+                        <div class="carousel-caption">
+                            <h3>Slide 1 title</h3>
+                            <p>Slide 1 description.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/imgs/carousel/Habana2a.png" alt="" class="img-responsive" />
+                        <div class="carousel-caption">
+                            <h3>Slide 2 title</h3>
+                            <p>Slide 2 description.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/imgs/carousel/Trinidad2a.png" alt="" class="img-responsive" />
+                        <div class="carousel-caption">
+                            <h3>Slide 3 title</h3>
+                            <p>Slide 3 description.</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel1" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+                <a class="right carousel-control" href="#carousel1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
             </div>
-        </nav>
-        <div id="carousel1" class="carousel slide section-container hidden-xs" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel1" data-slide-to="1"></li>
-                <li data-target="#carousel1" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="assets/imgs/carousel/Habana2a.png" alt="" class="img-responsive" />
-                    <div class="carousel-caption">
-                        <h3>Slide 1 title</h3>
-                        <p>Slide 1 description.</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/imgs/carousel/Santa_Clara2a.png" alt="" class="img-responsive" />
-                    <div class="carousel-caption">
-                        <h3>Slide 2 title</h3>
-                        <p>Slide 2 description.</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/imgs/carousel/Trinidad2a.png" alt="" class="img-responsive" />
-                    <div class="carousel-caption">
-                        <h3>Slide 3 title</h3>
-                        <p>Slide 3 description.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel1" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-            <a class="right carousel-control" href="#carousel1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-        </div>
-        <div class="container section-container" id="main">
-            <!-- Three columns of text below the carousel -->
-            <!-- /.row -->
-            <!-- START THE FEATURETTES -->
-            <div class="row text-center section-container animated fadeInUp" id="overview">
-                <div class="container section-container" id="overview">
-                    <div class="col-md-3 col-sm-6">
-                        <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                        <h2>Welcome</h2>
-                        <p>Waiting for you, and sure about our tears with your departure.</p>
-                        <p><a class="btn btn-default" href="offers/welcome.html" role="button">View details &raquo;</a></p>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <img src="assets/imgs/overview/almendron2a.png" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                        <h2>Transport</h2>
-                        <p>¿Cómo llegar a la ciudad desde el aeropuerto? Llegue a su "casa particular".</p>
-                        <p><a class="btn btn-default" href="offers/transport.html" role="button">View details &raquo;</a></p>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <img src="assets/imgs/overview/acommodation.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                        <h2>Accommodations</h2>
-                        <p>Donde quedarse.</p>
-                        <p><a class="btn btn-default" href="offers/accommodations.html" role="button">View details &raquo;</a></p>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <img src="assets/imgs/overview/tours2a.png" alt="Generic placeholder image" width="256" height="256" class="img-thumbnail">
-                        <h2>Tours</h2>
-                        <p>Descubra la Cuba real, la Cuba de a pie.</p>
-                        <p><a class="btn btn-default" href="offers/tours.html" role="button">View details &raquo;</a></p>
-                    </div>
-                </div>
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-            </div>
-            <div id="experiences" class="section-container animated fadeInUp">
-                <div class="row">
-                    <div class="container">
-                        <div class="text-center">
-                            <h1 class="section-title">Stories</h1>
-                            <span>Never miss a story, live them with us.</span>
-                        </div>
-                        <hr class="featurette-divider">
-                    </div>
-                </div>
-                <div class="row featurette">
-                    <div class="container">
-                        <div class="col-sm-7">
-                            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-sm-5">
-                            <img class="featurette-image center-block img-responsive img-thumbnail" src="assets/imgs/experiences/IMG_6664.JPG" alt="Generic placeholder image">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="container">
-                        <hr />
-                    </div>
-                </div>
-                <div class="row featurette">
-                    <div class="container">
-                        <div class="col-sm-7 col-sm-push-5">
-                            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-sm-5 col-sm-pull-7">
-                            <img class="featurette-image img-responsive center-block img-thumbnail" src="assets/imgs/experiences/IMG_6668.JPG" alt="Generic placeholder image">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="container">
-                        <hr />
-                    </div>
-                </div>
-                <div class="row featurette">
-                    <div class="container">
-                        <div class="col-sm-7">
-                            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        </div>
-                        <div class="col-sm-5">
-                            <img class="featurette-image img-responsive center-block img-thumbnail" src="assets/imgs/experiences/IMG_6679.JPG" alt="Generic placeholder image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="friends" class="section-container animated fadeInUp">
-                <div class="row text-center">
-                    <div class="container">
-                        <div>
-                            <h1 class="section-title">Friends</h1>
-                            <span>Our friends are important to us and we listen to them always.</span>
-                        </div>
-                        <hr class="featurette-divider">
-                    </div>
-                </div>
-                <div class="row featurette">
-                    <div class="container">
-                        <div class="col-sm-3 text-center">
-                            <img class="featurete-image img-thumbnail img-responsive" src="assets/imgs/friends/GUTL_Cubaconf_19.jpg" alt="Generic placeholder image" width="200" height="200">
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                            <span class="text-muted pull-right">LordFord.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center" id="contact">
-                <div class="row text-center">
-                    <div class="container">
-                        <div>
-                            <h1 class="section-title">About us</h1>
-                            <span>Know more about out family and contact us if you want.</span>
-                        </div>
-                        <hr class="featurette-divider">
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row section-container">
-                        <div class="col-sm-4">
+            <div class="container section-container" id="main">
+                <!-- Three columns of text below the carousel -->
+                <!-- /.row -->
+                <!-- START THE FEATURETTES -->
+                <div class="row text-center section-container animated fadeInUp" id="overview">
+                    <div class="container section-container" id="overview">
+                        <div class="col-md-3 col-sm-6">
                             <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                            <h2>Yanet</h2>
+                            <h2>Welcome</h2>
                             <p>Waiting for you, and sure about our tears with your departure.</p>
-                            <p></p>
+                            <p><a class="btn btn-default" href="offers/welcome.html" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-sm-4">
-                            <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                            <h2>Abel</h2>
-                            <p>Waiting for you, and sure about our tears with your departure.</p>
-                            <p></p>
+                        <div class="col-md-3 col-sm-6">
+                            <img src="assets/imgs/overview/almendron2a.png" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
+                            <h2>Transport</h2>
+                            <p>¿Cómo llegar a la ciudad desde el aeropuerto? Llegue a su "casa particular".</p>
+                            <p><a class="btn btn-default" href="offers/transport.html" role="button">View details &raquo;</a></p>
                         </div>
-                        <div class="col-sm-4">
-                            <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
-                            <h2>Jane</h2>
-                            <p>Waiting for you, and sure about our tears with your departure.</p>
-                            <p></p>
+                        <div class="col-md-3 col-sm-6">
+                            <img src="assets/imgs/overview/acommodation.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
+                            <h2>Accommodations</h2>
+                            <p>Donde quedarse.</p>
+                            <p><a class="btn btn-default" href="offers/accommodations.html" role="button">View details &raquo;</a></p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img src="assets/imgs/overview/tours2a.png" alt="Generic placeholder image" width="256" height="256" class="img-thumbnail">
+                            <h2>Tours</h2>
+                            <p>Descubra la Cuba real, la Cuba de a pie.</p>
+                            <p><a class="btn btn-default" href="offers/tours.html" role="button">View details &raquo;</a></p>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                </div>
+                <div id="experiences" class="section-container animated fadeInUp">
+                    <div class="row">
+                        <div class="container">
+                            <div class="text-center">
+                                <h1 class="section-title">Stories</h1>
+                                <span>Never miss a story, live them with us.</span>
+                            </div>
+                            <hr class="featurette-divider">
+                        </div>
+                    </div>
+                    <div class="row featurette">
+                        <div class="container">
+                            <div class="col-sm-7">
+                                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                            </div>
+                            <div class="col-sm-5">
+                                <img class="featurette-image center-block img-responsive img-thumbnail" src="assets/imgs/experiences/IMG_6664.JPG" alt="Generic placeholder image">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="row" id="contact-form">
-                            <div class="col-sm-4 col-sm-offset-1">
-                                <div class="clearfix">
-                                    <h3><span class="glyphicon glyphicon-home"></span></h3>
-                                    <span>308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111.</span>
-                                </div>
-                                <div class="clearfix">
-                                    <h3><span class="glyphicon glyphicon-phone"></span></h3>
-                                    <span>1-800-BOO-YAHH</span>
-                                </div>
-                                <div class="clearfix">
-                                    <h3><span class="glyphicon glyphicon-envelope"></span></h3>
-                                    <span>hello@knightstudios.com</span>
-                                </div>
-                                <ul class="social-link list-inline">
-                                    <li class="twitter">
-                                        <button class="btn btn-default" type="button">Twitter</button>
-                                    </li>
-                                    <li class="facebook">
-                                        <button class="btn btn-default" type="button">Facebook</button>
-                                    </li>
-                                    <li class="gplus">
-                                        <button class="btn btn-default" type="button">Google+</button>
-                                    </li>
-                                </ul>
+                        <div class="container">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row featurette">
+                        <div class="container">
+                            <div class="col-sm-7 col-sm-push-5">
+                                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                             </div>
-                            <div class="col-sm-offset-1 col-sm-4">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control input-lg" name="name" placeholder="Enter name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control input-lg" name="email" placeholder="Enter email">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control input-lg" placeholder="Comment or question" rows="5"></textarea>
-                                    </div>
-                                    <button class="btn btn-default" type="button">Send message</button>
-                                </form>
+                            <div class="col-sm-5 col-sm-pull-7">
+                                <img class="featurette-image img-responsive center-block img-thumbnail" src="assets/imgs/experiences/IMG_6668.JPG" alt="Generic placeholder image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row featurette">
+                        <div class="container">
+                            <div class="col-sm-7">
+                                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                            </div>
+                            <div class="col-sm-5">
+                                <img class="featurette-image img-responsive center-block img-thumbnail" src="assets/imgs/experiences/IMG_6679.JPG" alt="Generic placeholder image">
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-                <!-- /.col-lg-3 -->
-            </div>
-            <!-- /END THE FEATURETTES -->
-            <!-- FOOTER -->
-        </div>
-        <div class="container" id="footer">
-            <div class="row">
-                <div class="container">
-                    <div>
-                        &nbsp;
-</div>
-                    <hr class="featurette-divider">
+                <div id="friends" class="section-container animated fadeInUp">
+                    <div class="row text-center">
+                        <div class="container">
+                            <div>
+                                <h1 class="section-title">Friends</h1>
+                                <span>Our friends are important to us and we listen to them always.</span>
+                            </div>
+                            <hr class="featurette-divider">
+                        </div>
+                    </div>
+                    <div class="row featurette">
+                        <div class="container">
+                            <div class="col-sm-3 text-center">
+                                <img class="featurete-image img-thumbnail img-responsive" src="assets/imgs/friends/GUTL_Cubaconf_19.jpg" alt="Generic placeholder image" width="200" height="200">
+                            </div>
+                            <div class="col-sm-9">
+                                <blockquote>
+                                    <p><em>"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus."</em></p>
+                                    <small><cite title="author">LordFord</cite></small>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="row text-center" id="contact">
+                    <div class="row text-center">
+                        <div class="container">
+                            <div>
+                                <h1 class="section-title">About us</h1>
+                                <span>Know more about out family and contact us if you want.</span>
+                            </div>
+                            <hr class="featurette-divider">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row section-container">
+                            <div class="col-sm-4">
+                                <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
+                                <h2>Yanet</h2>
+                                <p>Waiting for you, and sure about our tears with your departure.</p>
+                                <p></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
+                                <h2>Abel</h2>
+                                <p>Waiting for you, and sure about our tears with your departure.</p>
+                                <p></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="assets/imgs/overview/us.jpg" alt="Generic placeholder image" width="256" height="256" class="img-responsive img-thumbnail">
+                                <h2>Jane</h2>
+                                <p>Waiting for you, and sure about our tears with your departure.</p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row" id="contact-form">
+                                <div class="col-sm-4 col-sm-offset-1">
+                                    <div class="clearfix">
+                                        <h3><span class="fa fa-map-marker"></span></h3>
+                                        <span>308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111.</span>
+                                    </div>
+                                    <div class="clearfix">
+                                        <h3><span class="fa fa-phone-square"></span></h3>
+                                        <span>1-800-BOO-YAHH</span>
+                                    </div>
+                                    <div class="clearfix">
+                                        <h3><span class="fa fa-envelope"></span></h3>
+                                        <span>hello@knightstudios.com</span>
+                                    </div>
+                                    <ul class="social-link list-inline">
+                                        <li class="facebook">
+                                            <span class="fa fa-facebook-square fa-2x"></span>
+                                        </li>
+                                        <li class="twitter">
+                                            <span class="fa fa-twitter-square fa-2x"></span>
+                                        </li>
+                                        <li class="gplus">
+                                            <span class="fa fa-google-plus-square fa-2x"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-4">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" name="name" placeholder="Enter name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control input-lg" name="email" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control input-lg" placeholder="Comment or question" rows="5"></textarea>
+                                        </div>
+                                        <button class="btn btn-default" type="button">Send message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                    <!-- /.col-lg-3 -->
+                </div>
+                <!-- /END THE FEATURETTES -->
+                <!-- FOOTER -->
             </div>
-            <footer>
-                <p>&copy; 2016 SantaClaraWalkingTour &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-            </footer>
+            <div class="container" id="footer">
+                <div class="row">
+                    <div class="container">
+                        <div>
+                            &nbsp;
+</div>
+                        <hr class="featurette-divider">
+                    </div>
+                </div>
+                <footer>
+                    <p>&copy; 2016 SantaClaraWalkingTour &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                </footer>
+            </div>
+            <!-- Carousel
+    ================================================== -->
+            <!-- /.carousel -->
+            <!-- Marketing messaging and featurettes
+    ================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
+            <!-- /.container -->
+            <!-- Bootstrap core JavaScript
+    ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+            <script src="assets/js/holder.min.js"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+            <!-- Smoothscroll -->
+            <script src="assets/js/wow.min.js"></script>
+            <script src="assets/js/scwt.js"></script>
+            <script>new WOW().init();</script>
         </div>
-        <!-- Carousel
-    ================================================== -->
-        <!-- /.carousel -->
-        <!-- Marketing messaging and featurettes
-    ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-        <!-- /.container -->
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-        <script src="assets/js/holder.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-        <!-- Smoothscroll -->
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/scwt.js"></script>
-        <script>new WOW().init();</script>
     </body>
 </html>

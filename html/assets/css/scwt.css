@@ -1,6 +1,12 @@
 body, html {
-    width: 95%;
+    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
 }
 
 .section-container {
@@ -31,8 +37,16 @@ a {
 
 #navbar {
     padding: 15px 15px;
+/*
     box-shadow: 0 4px 5px -3px #ececec;
+*/
     background-color: white;
+    position: fixed;
+    width: 100%;
+}
+
+#nav1 {
+    cursor: pointer;
 }
 
 .nav > li > a {
