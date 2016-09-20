@@ -1,6 +1,6 @@
-body {
-    height: 100%;
-    width: 100%;
+body, html {
+    width: 95%;
+    margin: 0 auto;
 }
 
 .section-container {
@@ -56,4 +56,47 @@ a {
 
 .navbar-toggle > span {
     background-color: white;
+}
+
+#contact-form {
+    padding-top: 30px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+    .carousel .item {
+        height: 400px;
+    }
+    .carousel-inner > .item > img {
+        height: 400px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 980px) {
+    .carousel {
+        height: 500px;
+    }
+    .carousel .item {
+        height: 500px;
+    }
+    .carousel-inner > .item > img {
+        height: 500px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel {
+        height: 600px;
+    }
+    .carousel .item {
+        height: 600px;
+    }
+    .carousel-inner > .item > img {
+        height: 600px;
+    }
 }
