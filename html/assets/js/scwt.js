@@ -1,6 +1,3 @@
-$('#brand').click(function() {
-    window.location='index.html';
-});
 //SmothScroll
 $('a[href*=#]').click(function() {
     if (this.hash == "#carousel1") {return true;}
