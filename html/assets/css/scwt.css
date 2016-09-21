@@ -48,6 +48,7 @@ a {
 
 #nav1 {
     cursor: pointer;
+    max-width: 1000px;
 }
 
 .nav > li > a {
