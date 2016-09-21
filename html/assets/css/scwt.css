@@ -27,10 +27,8 @@ a {
     color: inherit;
 }
 
-#overview {
-/*
-    padding-top: 50px;
-*/
+.featurette-heading {
+    margin-top: 5px;
 }
 
 #carousel1 {
