@@ -36,6 +36,13 @@ a {
     margin-top: 80px;
 }
 
+.carousel-caption-inner {
+    width: 90%;
+    border-radius: 10px;
+    text-shadow: rgba(0, 0, 0, 1) 2px 3px 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 #navbar {
     padding: 15px 15px;
 /*
