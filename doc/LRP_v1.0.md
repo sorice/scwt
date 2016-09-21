@@ -14,7 +14,6 @@
 ## To Do List {#todo}
 
 ## Home
-- Sugerencia de texto para el enlace "Home" -> Ej. Overview, Welcome, ... otros
 - Enlace de "refrescar" para sacar otros comentarios de los amigos. (usar ajax)
 - Botón del Welcome se dirige a la 1ra oferta "Bienvenida"(día 8)
 - About us en cada team member se ponen los enlaces a sus redes sociales y mailto personalizado.
@@ -24,27 +23,28 @@
 
 ## Stories
 - Las historias tendrán una galería
-* ESCRIBIR 3 primeras stories _P, Abel y Yanet_
+* "ESCRIBIR 3 primeras stories _P, Abel y Yanet_" -> 
     1. FOTOS: Alessandra; Leo and Margaret; Shan.
 - PHP Stories: Poner una página aparte dinámica para escoger las últimas 3 y guardar las viejas. _P, Leo_
 
 ## Tours
-* MONTAR página Tours _P, Leonel_
-* ESCRIBIR Transport _P, Abel y Yanet_
 * ESCRIBIR Welcome _P, Yanet_
     1. MONTAR página Welcome _P, Abel_
 - Offers: En Tours add "Opening Ours" (enlighten) _P, Abel_
+* "MONTAR página Tours _OK, Leonel y Abel_" ->
+* FOTO Welcome Day.
+* BROCHURE Welcome Day.
 
 ## Accomodations
 - Cada hostal tendrá una galería
 * Decidir hostales (y sí vamos a separar por tipo de servicio) _P, Abel y Yanet_
     1. ESCRIBIR Accommodations 
-    2. MONTAR página Accommodations _P, Abel_
     3. FOTOS Hostales + websites.
 
 ## Transports
 - Cada tipo de transporte tendrá una galería
-* MONTAR página Transport _P, Abel_
+* ESCRIBIR Transport _P, Abel y Yanet_
+
 
 ## Configuration Management
 - Despliegue
@@ -56,6 +56,7 @@
 ## 1 Development Process
 
 ### 1.1 Home
+- Sugerencia de texto para el enlace "Home" -> Ej. Overview, Welcome, ... otros.(día 9) _OK, Leonel_
 * Formulario de contacto (día 8) _OK, Leonel_
 * Montar el Home (vista en el móvil, tablet y PCs)(día 8) _OK, Leonel_ 
 * carrusel pictures features:_OK, Abel_(día 8)
@@ -77,13 +78,15 @@
     * Disminuir tamaño del banner.[OK](día 2)
 - Haciendo primeros enlaces.(día 1)
 
-
-### Transportations Webpage
-
-### Tours Acommodations
+### Stories Webpage
 
 ### Tours Webpage
-- ESCRIBIR página Tours[OK](día 2)
+
+### Transportations Webpage
+* MONTAR página Transport _OK, Leonel y Abel_ (día 9)
+
+### Acommodations Webpage
+-  MONTAR página Accommodations _OK, Leonel y Abel_(día 10)
 
 ## Designing/Ideas (BrainStorm Process)
 - Definir secciones dinámicas.[OK]-> una sola para guardar las Experiences que vayan pasando.(día 4)
