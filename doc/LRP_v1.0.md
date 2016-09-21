@@ -24,7 +24,7 @@
 
 ## Stories
 - Las historias tendrán una galería
-* ESCRIBIR 3 primeras stories _P, Yanet_
+* ESCRIBIR 3 primeras stories _P, Abel y Yanet_
     1. FOTOS: Alessandra; Leo and Margaret; Shan.
 - PHP Stories: Poner una página aparte dinámica para escoger las últimas 3 y guardar las viejas. _P, Leo_
 
