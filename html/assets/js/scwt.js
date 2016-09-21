@@ -1,4 +1,4 @@
-$('#nav1').click(function() {
+$('#brand').click(function() {
     window.location='index.html';
 });
 //SmothScroll
