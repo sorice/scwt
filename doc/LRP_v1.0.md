@@ -7,32 +7,27 @@
 
 ## Future {#future}
 - logo
-- Backend para Yanet agregar stories, y Testimonials.
+- Backend para Yanet agregar stories.
 - buscar CubaWalkingTours.com a ver si está cogido.
 - OJO: 6ta página: Instrucciones para los turistas.
 
 ## To Do List {#todo}
 
 ## Home
-- Enlace de "refrescar" para sacar otros comentarios de los amigos. (usar ajax)
-- Botón del Welcome se dirige a la 1ra oferta "Bienvenida"(día 8)
-- About us en cada team member se ponen los enlaces a sus redes sociales y mailto personalizado.
-- 3. FOTOS personales para Banner
+- FOTO: Sean.
+- ESCRIBIR Privacy and term docs.
+- DEV: Enlace de "refrescar" para sacar otros comentarios de los amigos. (usar ajax)
 - PHP: proceso del formulario de contacto.
-- About us, agregar link a nuestro canal de youtube y a instagram.
+- Contact us, agregar link a nuestro canal de youtube y a instagram.
 
 ## Stories
-- Las historias tendrán una galería
-* "ESCRIBIR 3 primeras stories _P, Abel y Yanet_" -> 
-    1. FOTOS: Alessandra; Leo and Margaret; Shan.
+- [Las historias tendrán una galería] ->
 - PHP Stories: Poner una página aparte dinámica para escoger las últimas 3 y guardar las viejas. _P, Leo_
 
 ## Tours
 * ESCRIBIR Welcome _P, Yanet_
     1. MONTAR página Welcome _P, Abel_
 - Offers: En Tours add "Opening Ours" (enlighten) _P, Abel_
-* "MONTAR página Tours _OK, Leonel y Abel_" ->
-* FOTO Welcome Day.
 * BROCHURE Welcome Day.
 
 ## Accomodations
@@ -43,7 +38,7 @@
 
 ## Transports
 - Cada tipo de transporte tendrá una galería
-* ESCRIBIR Transport _P, Abel y Yanet_
+* [ESCRIBIR Transport _P, Abel y Yanet_]
 
 
 ## Configuration Management
@@ -56,12 +51,17 @@
 ## 1 Development Process
 
 ### 1.1 Home
+- DEV: Botón del Welcome se dirige a la 1ra oferta "Bienvenida"(día 11)
+* FOTO Overview Welcome Day. (día 11) _OK, Abel_
+* FOTOS: about us.(día 11) _OK, Abel_
+* REVISAR: página home todos los textos.
 - Sugerencia de texto para el enlace "Home" -> Ej. Overview, Welcome, ... otros.(día 9) _OK, Leonel_
 * Formulario de contacto (día 8) _OK, Leonel_
 * Montar el Home (vista en el móvil, tablet y PCs)(día 8) _OK, Leonel_ 
-* carrusel pictures features:_OK, Abel_(día 8)
-    1. height 1024px
-    2. width 1080px (x2 para garantizar más calidad) y evaluar el height
+* pictures features:_OK, Abel_(día 8)
+    1. carrusel: height 1024px & width 1080px (x2 para garantizar más calidad) y evaluar el height
+    2. overview: 480x360
+    3. stories: 
 * TERMINAR Carrusel v1.0 (día 8) _OK, Leonel_
 * BUSCAR cámara _P, Lili_(día 7)
     1. FOTOS "Casa Particular" (Hostales) + websites.
@@ -79,8 +79,11 @@
 - Haciendo primeros enlaces.(día 1)
 
 ### Stories Webpage
+* ESCRIBIR 3 primeras stories _P, Abel y Yanet_ (día 10 & 11)
+    1. FOTOS: Alessandra; Leo and Margaret; Sean.
 
 ### Tours Webpage
+* MONTAR página Tours _OK, Leonel y Abel_ (día 10)
 
 ### Transportations Webpage
 * MONTAR página Transport _OK, Leonel y Abel_ (día 9)

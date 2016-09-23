@@ -33,6 +33,16 @@ a {
     font-size: 35px;
 }
 
+.lead {
+    text-align: justify;
+}
+
+/*
+.text-justify {
+    font-size: 15px
+}
+*/
+
 #carousel1 {
     margin-top: 80px;
 }
