@@ -25,5 +25,9 @@
 **Subtitle:** Write us to share news about our friends, families, countries & the website.
 
 
+Ligthning your way before arrival
 
+We will be your eyes
+
+Watching for your fun and learning on Cuban vacations
 

@@ -1,0 +1,132 @@
+body, html {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+}
+
+.section-container {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.social-link {
+    margin: 30px;
+}
+
+a {
+    color: inherit;
+}
+
+.featurette-heading {
+    margin-top: 5px;
+    font-size: 35px;
+}
+
+.lead {
+    text-align: justify;
+}
+
+/*
+.text-justify {
+    font-size: 15px
+}
+*/
+
+#carousel1 {
+    margin-top: 80px;
+}
+
+.carousel-caption-inner {
+    width: 90%;
+    border-radius: 10px;
+    text-shadow: rgba(0, 0, 0, 1) 2px 3px 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#navbar {
+    padding: 15px 15px;
+/*
+    box-shadow: 0 4px 5px -3px #ececec;
+*/
+    background-color: #f2f2f2;
+    position: fixed;
+    width: 100%;
+    color: white;
+}
+
+.nav > li > a {
+    text-transform: uppercase;
+}
+
+.nav > li > a, .navbar-brand {
+    color: #777777;
+    font-weight: bold;
+
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+    border-radius: 3px;
+}
+
+.navbar-toggle {
+    background-color: #d6d6ea;
+}
+
+.navbar-toggle > span {
+    background-color: white;
+}
+
+#contact-form {
+    padding-top: 30px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+    .carousel .item {
+        height: 400px;
+    }
+    .carousel-inner > .item > img {
+        height: 400px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 980px) {
+    .carousel {
+        height: 500px;
+    }
+    .carousel .item {
+        height: 500px;
+    }
+    .carousel-inner > .item > img {
+        height: 500px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel {
+        height: 600px;
+    }
+    .carousel .item {
+        height: 600px;
+    }
+    .carousel-inner > .item > img {
+        height: 600px;
+    }
+}
