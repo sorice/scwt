@@ -12,3 +12,14 @@ $('a[href*=#]').click(function() {
         }
     }
 });
+
+// send message
+$('#btn_send').click(function() {
+    // validate input data here and submit form
+    if (true) {
+        return false
+    }
+    else {
+        $('#form_message').submit();
+    }
+});

@@ -37,7 +37,7 @@
                                 <a href="#contact"><i class="fa fa-comment">&nbsp;</i>Contact</a>
                             </li>
                             <li>
-                                <a href="'. site_url() .'/accommodation"><i class="fa fa-home">&nbsp;</i>Accomodations</a>
+                                <a href="'. site_url() .'/accommodation"><i class="fa fa-home">&nbsp;</i>Accommodation</a>
                             </li>
                             <li>
                                 <a href="'. site_url() .'/tours"><i class="fa fa-location-arrow">&nbsp;</i>Tours</a>
@@ -47,7 +47,7 @@
                         if (isset($nav_accommodation)) {
                             echo '
                                 <li class="active">
-                                    <a href="#accomodations"><i class="fa fa-home">&nbsp;</i>Accomodations</a>
+                                    <a href="#accommodations"><i class="fa fa-home">&nbsp;</i>Accommodation</a>
                                 </li>
                                 <li>
                                     <a href="#contact"><i class="fa fa-comment">&nbsp;</i>Contact</a>
@@ -72,7 +72,7 @@
                                     <a href="'. site_url() .'/transport"><i class="fa fa-truck">&nbsp;</i>Transportation</a>
                                 </li>
                                 <li>
-                                    <a href="'. site_url() .'/accommodation"><i class="fa fa-home">&nbsp;</i>Accomodations</a>
+                                    <a href="'. site_url() .'/accommodation"><i class="fa fa-home">&nbsp;</i>Accommodation</a>
                                 </li>';
                         }
                     }
