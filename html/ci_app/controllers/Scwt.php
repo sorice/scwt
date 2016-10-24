@@ -169,6 +169,27 @@ class Scwt extends CI_Controller {
     {
         $view_context = array();
 
+        // static text
+        $query = $this->db->select('tours')->from('static_text')->get();
+
+        $row = $query->row_object();
+        $view_context['tours_summary'] = $row->tours;
+
+        // tours
+        $tours = array();
+        $query = $this->db->select('id, cover_image, name, description, brochure')->from('tours')->get();
+
+        foreach($query->result() as $row) {
+            $tours[] = array(
+                'id' => $row->id,
+                'cover_image' => $row->cover_image,
+                'name' => $row->name,
+                'description' => $row->description,
+                'brochure' => $row->brochure
+            );
+        }
+        $view_context['tours'] = $tours;
+
         // general view's contexts
         // page title
         $header_context['title'] = 'Tours';
@@ -183,7 +204,7 @@ class Scwt extends CI_Controller {
         $this->load->view('header', $header_context);
         $this->load->view('nav', $nav_context);
         $this->load->view('carousel', $carousel_context);
-        $this->load->view('main', $view_context);
+        $this->load->view('tours', $view_context);
         $this->load->view('contact', $contact_context);
         $this->load->view('footer');
     }
