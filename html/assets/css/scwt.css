@@ -35,13 +35,8 @@ a {
 
 .lead {
     text-align: justify;
+    font-size: 18px;
 }
-
-/*
-.text-justify {
-    font-size: 15px
-}
-*/
 
 #carousel1 {
     margin-top: 80px;
