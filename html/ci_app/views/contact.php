@@ -3,7 +3,7 @@
         <div class="container">
             <div>
                 <h1 class="section-title">Contact us</h1>
-                <span class="lead-small">Know more about our family and contact us if you want.</span>
+                <span>Know more about our family and contact us if you want.</span>
             </div>
             <hr class="featurette-divider">
         </div>
@@ -13,24 +13,24 @@
             <div class="col-sm-4">
                 <img src="<?php if (isset($contact_img_yanet)) echo 'data:image/jpg;base64,'. $contact_img_yanet; ?>" alt="Yanet's contact image" width="256" height="256" class="img-responsive img-thumbnail">
                 <h2>Yanet</h2>
-                <p class="lead-small"><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
+                <p><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
                 <img src="<?php if (isset($contact_img_abel)) echo 'data:image/jpg;base64,'. $contact_img_abel; ?>" alt="Abel's contact image" width="256" height="256" class="img-responsive img-thumbnail">
                 <h2>Abel</h2>
-                <p class="lead-small"><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
+                <p><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
                 <img src="<?php if (isset($contact_img_jane)) echo 'data:image/jpg;base64,'. $contact_img_jane; ?>" alt="Jane's contact image" width="256" height="256" class="img-responsive img-thumbnail">
                 <h2>Jane</h2>
-                <p class="lead-small"><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
+                <p><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
                 <p></p>
             </div>
         </div>
         <div class="row">
-            <div class="row lead-small" id="contact-form">
+            <div class="row" id="contact-form">
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="clearfix">
                         <h3><span class="fa fa-map-marker"></span></h3>
