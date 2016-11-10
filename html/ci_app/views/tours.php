@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="text-center">
                     <h1 class="section-title">Tours</h1>
-                    <p><?php if (isset($tours_summary)) echo $tours_summary; else echo "Tours"; ?></p>
+                    <p class="lead-small"><?php if (isset($tours_summary)) echo $tours_summary; else echo "Tours"; ?></p>
                     <hr class="featurette-divider">
                 </div>
             </div>
