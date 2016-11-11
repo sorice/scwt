@@ -8,17 +8,14 @@ class Scwt extends CI_Controller {
 
         // load index.php page data
         // static text
-        $query = $this->db->select('overview, overview_welcome, overview_transport, overview_accommodation,
-            overview_tours, stories, friends')->from('static_text')->get();
-
-        $row = $query->row_object();
-        $view_context['overview_summary'] = $row->overview;
-        $view_context['overview_welcome'] = $row->overview_welcome;
-        $view_context['overview_transport'] = $row->overview_transport;
-        $view_context['overview_accommodation'] = $row->overview_accommodation;
-        $view_context['overview_tours'] = $row->overview_tours;
-        $view_context['stories_summary'] = $row->stories;
-        $view_context['friends_summary'] = $row->friends;
+        $this->load->model("statictext_model");
+        $view_context['overview_summary'] = $this->statictext_model->overview;
+        $view_context['overview_welcome'] = $this->statictext_model->overview_welcome;
+        $view_context['overview_transport'] = $this->statictext_model->overview_transport;
+        $view_context['overview_accommodation'] = $this->statictext_model->overview_accommodation;
+        $view_context['overview_tours'] = $this->statictext_model->overview_tours;
+        $view_context['stories_summary'] = $this->statictext_model->stories;
+        $view_context['friends_summary'] = $this->statictext_model->friends;
 
         // static images
         $query = $this->db->select('overview_img_welcome, overview_img_transport, overview_img_accommodation,
@@ -45,6 +42,7 @@ class Scwt extends CI_Controller {
         $view_context['stories'] = $stories;
 
         // friends
+        // update using random_element($array) in array_helper
         $friends = array();
         $query = $this->db->select('image, opinion, author')->from('friends')->limit(3)->get();
 
@@ -236,3 +234,4 @@ class Scwt extends CI_Controller {
 }
 
 // generate unique verification code for comments... var_dump(bin2hex(openssl_random_pseudo_bytes(16, $cstrong)));
+// or use CI_Security::get_random_bytes to generate verification codes...
