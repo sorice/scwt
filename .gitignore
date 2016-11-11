@@ -38,3 +38,6 @@ application/logs/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+
+# captcha images
+html/captcha/*
