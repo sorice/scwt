@@ -11,19 +11,43 @@
     <div class="container">
         <div class="row section-container">
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_yanet)) echo 'data:image/jpg;base64,'. $contact_img_yanet; ?>" alt="Yanet's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_yanet,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Yanet</h2>
                 <p class="lead-small"><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_abel)) echo 'data:image/jpg;base64,'. $contact_img_abel; ?>" alt="Abel's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_abel,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Abel</h2>
                 <p class="lead-small"><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_jane)) echo 'data:image/jpg;base64,'. $contact_img_jane; ?>" alt="Jane's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_jane,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Jane</h2>
                 <p class="lead-small"><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
                 <p></p>

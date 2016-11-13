@@ -14,14 +14,21 @@
                 if (isset($transports)) {
                     $i = 0;
                     foreach ($transports as $t) {
+                        $image_properties = array(
+                            'src'   => $t['cover_image'],
+                            'alt'   => 'Transport cover image',
+                            'class' => 'featurette-image img-responsive center-block img-thumbnail',
+                            'width'  => '256',
+                            'height' => '256'
+                        );
                         echo "<div class='row featurette'>
                             <div class='container'>
                                 <div class='col-sm-7 col-sm-push-5'>
                                     <h2 class='featurette-heading'>". $t['name'] ."</h2>
                                     <p class='lead'>". $t['description'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>
-                                    <img class='featurette-image img-responsive center-block img-thumbnail' src='data:image/jpg;base64,". $t['cover_image'] ."' alt='Transport cover image' height='256' width='256'>
+                                <div class='col-sm-5 col-sm-pull-7'>".
+                                img($image_properties) ."
                                 </div>
                             </div>
                         </div>";

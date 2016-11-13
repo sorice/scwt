@@ -18,14 +18,11 @@ class Scwt extends CI_Controller {
         $view_context['friends_summary'] = $this->statictext_model->friends;
 
         // static images
-        $query = $this->db->select('overview_img_welcome, overview_img_transport, overview_img_accommodation,
-            overview_img_tours')->from('static_images')->get();
-
-        $row = $query->row_object();
-        $view_context['overview_img_welcome'] = $row->overview_img_welcome;
-        $view_context['overview_img_transport'] = $row->overview_img_transport;
-        $view_context['overview_img_accommodation'] = $row->overview_img_accommodation;
-        $view_context['overview_img_tours'] = $row->overview_img_tours;
+        $this->load->model("staticimages_model");
+        $view_context['overview_img_welcome'] = $this->staticimages_model->overview_img_welcome;
+        $view_context['overview_img_transport'] = $this->staticimages_model->overview_img_transport;
+        $view_context['overview_img_accommodation'] = $this->staticimages_model->overview_img_accommodation;
+        $view_context['overview_img_tours'] = $this->staticimages_model->overview_img_tours;
 
         // stories
         $stories = array();
@@ -43,6 +40,7 @@ class Scwt extends CI_Controller {
 
         // friends
         // update using random_element($array) in array_helper
+        // up to 3
         $friends = array();
         $query = $this->db->select('image, opinion, author')->from('friends')->limit(3)->get();
 

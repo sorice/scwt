@@ -13,25 +13,61 @@
         <hr class="featurette-divider">
         <div class="container section-container" id="overview">
             <div class="col-md-3 col-sm-6">
-                <img src="<?php if (isset($overview_img_welcome)) echo 'data:image/jpg;base64,'. $overview_img_welcome; ?>" alt="Overview welcome image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $overview_img_welcome,
+                        'alt'    => 'Overview welcome image',
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Welcome</h2>
                 <p class="lead-small"><?php if (isset($overview_welcome)) echo $overview_welcome; else echo "Welcome"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/tours#welcome_day" role="button"><i class="fa fa-flag">&nbsp;</i>Reception &raquo;</a></p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <img src="<?php if (isset($overview_img_transport)) echo 'data:image/jpg;base64,'. $overview_img_transport; ?>" alt="Overview transport image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $overview_img_transport,
+                        'alt'    => 'Overview transport image',
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Transportation</h2>
                 <p class="lead-small"><?php if (isset($overview_transport)) echo $overview_transport; else echo "Transportation"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/transport" role="button"><i class="fa fa-truck">&nbsp;</i>Taxis &raquo;</a></p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <img src="<?php if (isset($overview_img_accommodation)) echo 'data:image/jpg;base64,'. $overview_img_accommodation; ?>" alt="Overview accommodation image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $overview_img_accommodation,
+                        'alt'    => 'Overview accommodation image',
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Accommodation</h2>
                 <p class="lead-small"><?php if (isset($overview_accommodation)) echo $overview_accommodation; else echo "Accommodation"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/accommodation" role="button"><i class="fa fa-home">&nbsp;</i>Casa Particular &raquo;</a></p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <img src="<?php if (isset($overview_img_tours)) echo 'data:image/jpg;base64,'. $overview_img_tours; ?>" alt="Overview tours image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $overview_img_tours,
+                        'alt'    => 'Overview tours image',
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Tours</h2>
                 <p class="lead-small"><?php if (isset($overview_tours)) echo $overview_tours; else echo "Tours"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/tours" role="button"><i class="fa fa-location-arrow">&nbsp;</i>Brochures &raquo;</a></p>
@@ -52,6 +88,11 @@
             if (isset($stories)) {
                 $i = 0;
                 foreach ($stories as $s) {
+                    $image_properties = array(
+                        'src'   => $s['cover_image'],
+                        'alt'   => 'Story cover image',
+                        'class' => 'img-responsive img-thumbnail'
+                    );
                     if ($i % 2 == 0) {
                         echo "<div class='row featurette'>
                             <div class='container'>
@@ -59,8 +100,8 @@
                                     <h2 class='featurette-heading'>". $s['title'] ."</h2>
                                     <p class='lead'>". $s['summary'] ."</p>
                                 </div>
-                                <div class='col-sm-5'>
-                                    <img src='data:image/jpg;base64,". $s['cover_image'] ."' alt='Story cover image' class='img-responsive img-thumbnail'>
+                                <div class='col-sm-5'>".
+                                img($image_properties) ."
                                 </div>
                             </div>
                         </div>";
@@ -72,8 +113,8 @@
                                     <h2 class='featurette-heading'>". $s['title'] ."</h2>
                                     <p class='lead'>". $s['summary'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>
-                                    <img src='data:image/jpg;base64,". $s['cover_image'] ."' alt='Story cover image' class='img-responsive img-thumbnail'>
+                                <div class='col-sm-5 col-sm-pull-7'>".
+                                img($image_properties) ."
                                 </div>
                             </div>
                         </div>";
@@ -105,10 +146,17 @@
             if (isset($friends)) {
                 $i = 0;
                 foreach ($friends as $s) {
+                    $image_properties = array(
+                        'src'    => $s['image'],
+                        'alt'    => 'Friend image',
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '200',
+                        'height' => '200'
+                    );
                     echo "<div class='row featurette'>
                         <div class='container'>
-                            <div class='col-sm-3 text-center'>
-                                <img src='data:image/jpg;base64,". $s['image'] ."' alt='Friend image' class='img-responsive img-thumbnail' width='200' height='200'>
+                            <div class='col-sm-3 text-center'>".
+                                img($image_properties) ."
                             </div>
                             <div class='col-sm-9'>
                                 <blockquote>

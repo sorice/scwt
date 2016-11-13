@@ -14,6 +14,13 @@
                 if (isset($accommodations)) {
                     $i = 0;
                     foreach ($accommodations as $a) {
+                        $image_properties = array(
+                            'src'   => $a['cover_image'],
+                            'alt'   => 'Accommodation cover image',
+                            'class' => 'featurette-image img-responsive center-block img-thumbnail',
+                            'width'  => '256',
+                            'height' => '256'
+                        );
                         echo "<div class='row featurette'>
                             <div class='container'>
                                 <div class='col-sm-7 col-sm-push-5'>
@@ -23,8 +30,8 @@
                                     &nbsp;&nbsp;&dash;Price: ". $a['price'] ."<br/>
                                     ". $a['description'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>
-                                    <img class='featurette-image img-responsive center-block img-thumbnail' src='data:image/jpg;base64,". $a['cover_image'] ."' alt='Accommodation cover image' height='256' width='256'>
+                                <div class='col-sm-5 col-sm-pull-7'>".
+                                img($image_properties) ."
                                 </div>
                             </div>
                         </div>";
