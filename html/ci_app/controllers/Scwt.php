@@ -8,27 +8,21 @@ class Scwt extends CI_Controller {
 
         // load index.php page data
         // static text
-        $query = $this->db->select('overview, overview_welcome, overview_transport, overview_accommodation,
-            overview_tours, stories, friends')->from('static_text')->get();
-
-        $row = $query->row_object();
-        $view_context['overview_summary'] = $row->overview;
-        $view_context['overview_welcome'] = $row->overview_welcome;
-        $view_context['overview_transport'] = $row->overview_transport;
-        $view_context['overview_accommodation'] = $row->overview_accommodation;
-        $view_context['overview_tours'] = $row->overview_tours;
-        $view_context['stories_summary'] = $row->stories;
-        $view_context['friends_summary'] = $row->friends;
+        $this->load->model("statictext_model");
+        $view_context['overview_summary'] = $this->statictext_model->overview;
+        $view_context['overview_welcome'] = $this->statictext_model->overview_welcome;
+        $view_context['overview_transport'] = $this->statictext_model->overview_transport;
+        $view_context['overview_accommodation'] = $this->statictext_model->overview_accommodation;
+        $view_context['overview_tours'] = $this->statictext_model->overview_tours;
+        $view_context['stories_summary'] = $this->statictext_model->stories;
+        $view_context['friends_summary'] = $this->statictext_model->friends;
 
         // static images
-        $query = $this->db->select('overview_img_welcome, overview_img_transport, overview_img_accommodation,
-            overview_img_tours')->from('static_images')->get();
-
-        $row = $query->row_object();
-        $view_context['overview_img_welcome'] = $row->overview_img_welcome;
-        $view_context['overview_img_transport'] = $row->overview_img_transport;
-        $view_context['overview_img_accommodation'] = $row->overview_img_accommodation;
-        $view_context['overview_img_tours'] = $row->overview_img_tours;
+        $this->load->model("staticimages_model");
+        $view_context['overview_img_welcome'] = $this->staticimages_model->overview_img_welcome;
+        $view_context['overview_img_transport'] = $this->staticimages_model->overview_img_transport;
+        $view_context['overview_img_accommodation'] = $this->staticimages_model->overview_img_accommodation;
+        $view_context['overview_img_tours'] = $this->staticimages_model->overview_img_tours;
 
         // stories
         $stories = array();
@@ -45,6 +39,8 @@ class Scwt extends CI_Controller {
         $view_context['stories'] = $stories;
 
         // friends
+        // update using random_element($array) in array_helper
+        // up to 3
         $friends = array();
         $query = $this->db->select('image, opinion, author')->from('friends')->limit(3)->get();
 
@@ -82,10 +78,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('transport')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['transport_summary'] = $row->transport;
+        $view_context['transport_summary'] = $this->statictext_model->transport;
 
         // transports
         $transports = array();
@@ -125,10 +120,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('accommodation')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['accommodation_summary'] = $row->accommodation;
+        $view_context['accommodation_summary'] = $this->statictext_model->accommodation;
 
         // accommodations
         $accommodations = array();
@@ -170,10 +164,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('tours')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['tours_summary'] = $row->tours;
+        $view_context['tours_summary'] = $this->statictext_model->tours;
 
         // tours
         $tours = array();
@@ -213,26 +206,26 @@ class Scwt extends CI_Controller {
     private function get_contact_info_helper() {
         // contact info
         $result = array();
-        // text
-        $query = $this->db->select('address, phone, contact_info_yanet, contact_info_abel, contact_info_jane')->from('static_text')->get();
 
-        $row = $query->row_object();
-        $result['contact_info_yanet'] = $row->contact_info_yanet;
-        $result['contact_info_abel'] = $row->contact_info_abel;
-        $result['contact_info_jane'] = $row->contact_info_jane;
-        $result['address'] = $row->address;
-        $result['phone'] = $row->phone;
+        // static text
+        $this->load->model("statictext_model");
+        $result['contact_info_yanet'] = $this->statictext_model->contact_info_yanet;
+        $result['contact_info_abel'] = $this->statictext_model->contact_info_abel;
+        $result['contact_info_jane'] = $this->statictext_model->contact_info_jane;
+        $result['address'] = $this->statictext_model->address;
+        $result['phone'] = $this->statictext_model->phone;
+        $result['email'] = $this->statictext_model->email;
 
-        // images
-        $query = $this->db->select('contact_img_yanet, contact_img_abel, contact_img_jane')->from('static_images')->get();
-
-        $row = $query->row_object();
-        $result['contact_img_yanet'] = $row->contact_img_yanet;
-        $result['contact_img_abel'] = $row->contact_img_abel;
-        $result['contact_img_jane'] = $row->contact_img_jane;
+        // static images
+        $this->load->model("staticimages_model");
+        $result['contact_img_yanet'] = $this->staticimages_model->contact_img_yanet;
+        $result['contact_img_abel'] = $this->staticimages_model->contact_img_abel;
+        $result['contact_img_jane'] = $this->staticimages_model->contact_img_jane;
 
         return $result;
     }
 }
 
 // generate unique verification code for comments... var_dump(bin2hex(openssl_random_pseudo_bytes(16, $cstrong)));
+// or use CI_Security::get_random_bytes to generate verification codes...
+// random_string in string helper
