@@ -4,7 +4,9 @@ Some values you must set before running SCWT website
 
 ## General aspects
 
-Be carefull about directory permission related with sessions, temp files, cache...
+Be carefull about directory permission related with sessions, temp files, cache, uploads...
+
+Set www-data as owner of directories: uploads, assets/imgs, assets/pdfs, captcha...
 
 
 

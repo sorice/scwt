@@ -12,6 +12,7 @@ class StaticText_model extends CI_Model {
     public $friends;
     public $address;
     public $phone;
+    public $email;
     public $contact_info_yanet;
     public $contact_info_abel;
     public $contact_info_jane;
@@ -40,6 +41,7 @@ class StaticText_model extends CI_Model {
         $this->friends = $row->friends;
         $this->address = $row->address;
         $this->phone = $row->phone;
+        $this->email = $row->email;
         $this->contact_info_yanet = $row->contact_info_yanet;
         $this->contact_info_abel = $row->contact_info_abel;
         $this->contact_info_jane = $row->contact_info_jane;
@@ -51,6 +53,7 @@ class StaticText_model extends CI_Model {
     public function update($data)
     {
         if(count($data)) {
+            $this->id = $data['id'];
             $this->overview = $data['overview'];
             $this->overview_welcome = $data['overview_welcome'];
             $this->overview_transport = $data['overview_transport'];
@@ -60,6 +63,7 @@ class StaticText_model extends CI_Model {
             $this->friends = $data['friends'];
             $this->address = $data['address'];
             $this->phone = $data['phone'];
+            $this->email = $data['email'];
             $this->contact_info_yanet = $data['contact_info_yanet'];
             $this->contact_info_abel = $data['contact_info_abel'];
             $this->contact_info_jane = $data['contact_info_jane'];
@@ -68,7 +72,7 @@ class StaticText_model extends CI_Model {
             $this->tours = $data['tours'];
 
             return $this->db->update($this->table_name, $this,
-                array('id' => $data['id']));
+                array('id' => $this->id));
         }
 
         return false;

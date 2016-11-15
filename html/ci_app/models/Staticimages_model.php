@@ -35,16 +35,13 @@ class StaticImages_model extends CI_Model {
     public function update($data)
     {
         if(count($data)) {
-            $this->overview_img_welcome = $data['overview_img_welcome'];
-            $this->overview_img_transport = $data['overview_img_transport'];
-            $this->overview_img_accommodation = $data['overview_img_accommodation'];
-            $this->overview_img_tours = $data['overview_img_tours'];
-            $this->contact_img_yanet = $data['contact_img_yanet'];
-            $this->contact_img_abel = $data['contact_img_abel'];
-            $this->contact_img_jane = $data['contact_img_jane'];
+            $this->id = $data["id"];
+
+            // update data
+            $this->$data['selected_image'] = $data['new_image'];
 
             return $this->db->update($this->table_name, $this,
-                array('id' => $data['id']));
+                array('id' => $this->id));
         }
 
         return false;

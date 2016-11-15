@@ -78,10 +78,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('transport')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['transport_summary'] = $row->transport;
+        $view_context['transport_summary'] = $this->statictext_model->transport;
 
         // transports
         $transports = array();
@@ -121,10 +120,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('accommodation')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['accommodation_summary'] = $row->accommodation;
+        $view_context['accommodation_summary'] = $this->statictext_model->accommodation;
 
         // accommodations
         $accommodations = array();
@@ -166,10 +164,9 @@ class Scwt extends CI_Controller {
         $view_context = array();
 
         // static text
-        $query = $this->db->select('tours')->from('static_text')->get();
+        $this->load->model("statictext_model");
 
-        $row = $query->row_object();
-        $view_context['tours_summary'] = $row->tours;
+        $view_context['tours_summary'] = $this->statictext_model->tours;
 
         // tours
         $tours = array();
@@ -209,23 +206,21 @@ class Scwt extends CI_Controller {
     private function get_contact_info_helper() {
         // contact info
         $result = array();
-        // text
-        $query = $this->db->select('address, phone, contact_info_yanet, contact_info_abel, contact_info_jane')->from('static_text')->get();
 
-        $row = $query->row_object();
-        $result['contact_info_yanet'] = $row->contact_info_yanet;
-        $result['contact_info_abel'] = $row->contact_info_abel;
-        $result['contact_info_jane'] = $row->contact_info_jane;
-        $result['address'] = $row->address;
-        $result['phone'] = $row->phone;
+        // static text
+        $this->load->model("statictext_model");
+        $result['contact_info_yanet'] = $this->statictext_model->contact_info_yanet;
+        $result['contact_info_abel'] = $this->statictext_model->contact_info_abel;
+        $result['contact_info_jane'] = $this->statictext_model->contact_info_jane;
+        $result['address'] = $this->statictext_model->address;
+        $result['phone'] = $this->statictext_model->phone;
+        $result['email'] = $this->statictext_model->email;
 
-        // images
-        $query = $this->db->select('contact_img_yanet, contact_img_abel, contact_img_jane')->from('static_images')->get();
-
-        $row = $query->row_object();
-        $result['contact_img_yanet'] = $row->contact_img_yanet;
-        $result['contact_img_abel'] = $row->contact_img_abel;
-        $result['contact_img_jane'] = $row->contact_img_jane;
+        // static images
+        $this->load->model("staticimages_model");
+        $result['contact_img_yanet'] = $this->staticimages_model->contact_img_yanet;
+        $result['contact_img_abel'] = $this->staticimages_model->contact_img_abel;
+        $result['contact_img_jane'] = $this->staticimages_model->contact_img_jane;
 
         return $result;
     }
@@ -233,3 +228,4 @@ class Scwt extends CI_Controller {
 
 // generate unique verification code for comments... var_dump(bin2hex(openssl_random_pseudo_bytes(16, $cstrong)));
 // or use CI_Security::get_random_bytes to generate verification codes...
+// random_string in string helper

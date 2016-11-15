@@ -41,3 +41,5 @@ application/logs/*
 
 # captcha images
 html/captcha/*
+
+html/ci_app/logs/*.php

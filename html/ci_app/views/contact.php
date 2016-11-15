@@ -66,7 +66,7 @@
                     </div>
                     <div class="clearfix">
                         <h3><span class="fa fa-envelope"></span></h3>
-                        <span><a href="mailto:info@santaclarawalkingtour.com?subject=About Santa Clara Walking Tour">info@santaclarawalkingtour.com</a></span>
+                        <span><?php if(isset($email)) echo "<a href='mailto:". $email ."?subject=About Santa Clara Walking Tour'>". $email ."</a>"; else echo 'Email'; ?></span>
                     </div>
                     <ul class="social-link list-inline">
                         <li class="facebook">

@@ -30,7 +30,7 @@
                     echo validation_errors();
 
                     if(isset($errors)) {
-                        echo "<b>Operation failed, please try again.</p>";
+                        echo "<b>". $errors ."</p>";
                     }
                     else {
                         if(isset($data_saved)) {
@@ -76,6 +76,10 @@
                 <div class="form-group col-md-6">
                     <label class="control-label" for="phone">Phone</label>
                     <textarea class="form-control" rows="4" id="phone" name="phone"><?php echo $model->phone; ?></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="email">Email</label>
+                    <textarea class="form-control" rows="4" id="email" name="email"><?php echo $model->email; ?></textarea>
                 </div>
                 <div class="form-group col-md-6">
                     <label class="control-label" for="contact_info_yanet">Contact info: Yanet</label>

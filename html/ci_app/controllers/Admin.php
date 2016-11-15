@@ -126,8 +126,6 @@ class Admin extends CI_Controller {
                 $this->load->model('statictext_model');
 
                 if(count($this->input->post())) {
-                    $u = md5(html_escape($this->input->post('username')));
-
                     // load validations
                     $this->load->library('form_validation');
                     // set rules
@@ -140,6 +138,7 @@ class Admin extends CI_Controller {
                     $this->form_validation->set_rules('friends', 'Friends heading', 'trim|required');
                     $this->form_validation->set_rules('address', 'Address', 'trim|required');
                     $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
+                    $this->form_validation->set_rules('email', 'Email', 'trim|required');
                     $this->form_validation->set_rules('contact_info_yanet', 'Contact info: Yanet', 'trim|required');
                     $this->form_validation->set_rules('contact_info_abel', 'Contact info: Abel', 'trim|required');
                     $this->form_validation->set_rules('contact_info_jane', 'Contact info: Jane', 'trim|required');
@@ -160,17 +159,20 @@ class Admin extends CI_Controller {
                             "id", "overview", "overview_welcome",
                             "overview_transport", "overview_accommodation",
                             "overview_tours", "stories", "friends",
-                            "address", "phone", "contact_info_yanet",
+                            "address", "phone", "email", "contact_info_yanet",
                             "contact_info_abel", "contact_info_jane",
                             "transport", "accommodation", "tours"
                         );
+
+                        // update database
                         $result = $this->statictext_model->update(elements($items, $this->input->post()));
 
                         if($result) {
                             $view_context['data_saved'] = "Data saved.";
                         }
                         else {
-                            $view_context['errors'] = "Errors";
+                            $error_msg = $this->db->error()['message'];
+                            $view_context['errors'] = "Operation failed, please try again. Error: ". $error_msg;
                         }
                     }
                 }
@@ -183,7 +185,73 @@ class Admin extends CI_Controller {
                 $this->load->view('admin/statictext', $view_context);
             break;
             case "images":
-                echo "Listing static images";
+                $this->load->model('staticimages_model');
+
+                if(count($this->input->post())) {
+                    // upload file and process new image
+                    // config options
+                    $config['upload_path'] = './uploads/';
+                    $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                    // $config['max_size'] = 0;
+                    // $config['max_width'] = 1024;
+                    // $config['max_height'] = 768;
+
+                    // load upload library
+                    $this->load->library('upload', $config);
+
+                    if ($this->upload->do_upload('new_image')) {
+                        // select correct destination dir
+                        switch($this->input->post('selected_image')) {
+                            case 'overview_img_welcome':
+                            case 'overview_img_transport':
+                            case 'overview_img_accommodation':
+                            case 'overview_img_tours':
+                                $dest_dir = "assets/imgs/overview/";
+                                break;
+                            case 'contact_img_yanet':
+                            case 'contact_img_abel':
+                            case 'contact_img_jane':
+                                $dest_dir = "assets/imgs/contact/";
+                        }
+
+                        // generate new filename, eliminate common filename mistakes like
+                        // spaces, hyphen, dots...
+                        $dest = $dest_dir . random_string() . $this->upload->data('file_ext');
+
+                        // move uploaded file to final destination
+                        if(rename("uploads/" . $this->upload->data('orig_name'), $dest)) {
+                            $view_context['data_saved'] = "Data saved.";
+
+                            // duplicate readonly input->post array and update new_image value
+                            $tmp_input = $this->input->post();
+                            $tmp_input['new_image'] = $dest;
+
+                            // load array helper
+                            $this->load->helper('array');
+
+                            // using elements from array helper to extract data from post
+                            $items = array(
+                                "id", "selected_image", "new_image"
+                            );
+
+                            // update database
+                            $result = $this->staticimages_model->update(elements($items, $tmp_input));
+                        }
+                        else {
+                            $view_context['errors'] = "Operation failed, please try again. Error: can't move file to destination dir, please check directory permissions.";
+                        }
+                    }
+                    else {
+                        $view_context['errors'] = "Operation failed, please try again. Error: ". $this->upload->display_errors();
+                    }
+                }
+
+                $view_context['section_title'] = "Static Images";
+                $view_context['model'] = $this->staticimages_model;
+
+                // load helper and view
+                $this->load->helper('form');
+                $this->load->view('admin/staticimages', $view_context);
             break;
             case "stories":
                 echo "Listing stories";
