@@ -3,7 +3,7 @@
         <div class="container">
             <div>
                 <h1 class="section-title">Contact us</h1>
-                <span>Know more about our family and contact us if you want.</span>
+                <span class="lead-small">Know more about our family and contact us if you want.</span>
             </div>
             <hr class="featurette-divider">
         </div>
@@ -11,26 +11,50 @@
     <div class="container">
         <div class="row section-container">
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_yanet)) echo 'data:image/jpg;base64,'. $contact_img_yanet; ?>" alt="Yanet's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_yanet,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Yanet</h2>
-                <p><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
+                <p class="lead-small"><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_abel)) echo 'data:image/jpg;base64,'. $contact_img_abel; ?>" alt="Abel's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_abel,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Abel</h2>
-                <p><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
+                <p class="lead-small"><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
                 <p></p>
             </div>
             <div class="col-sm-4">
-                <img src="<?php if (isset($contact_img_jane)) echo 'data:image/jpg;base64,'. $contact_img_jane; ?>" alt="Jane's contact image" width="256" height="256" class="img-responsive img-thumbnail">
+                <?php
+                    $image_properties = array(
+                        'src'    => $contact_img_jane,
+                        'class'  => 'img-responsive img-thumbnail',
+                        'width'  => '256',
+                        'height' => '256'
+                    );
+                    echo img($image_properties);
+                ?>
                 <h2>Jane</h2>
-                <p><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
+                <p class="lead-small"><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
                 <p></p>
             </div>
         </div>
         <div class="row">
-            <div class="row" id="contact-form">
+            <div class="row lead-small" id="contact-form">
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="clearfix">
                         <h3><span class="fa fa-map-marker"></span></h3>
@@ -42,7 +66,7 @@
                     </div>
                     <div class="clearfix">
                         <h3><span class="fa fa-envelope"></span></h3>
-                        <span><a href="mailto:info@santaclarawalkingtour.com?subject=About Santa Clara Walking Tour">info@santaclarawalkingtour.com</a></span>
+                        <span><?php if(isset($email)) echo "<a href='mailto:". $email ."?subject=About Santa Clara Walking Tour'>". $email ."</a>"; else echo 'Email'; ?></span>
                     </div>
                     <ul class="social-link list-inline">
                         <li class="facebook">

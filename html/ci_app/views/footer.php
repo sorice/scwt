@@ -8,11 +8,11 @@
                     </div>
                 </div>
                 <footer>
-                    <p>&copy; 2016 SantaClaraWalkingTour &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                    <p  class="lead-small">&copy; 2016 SantaClaraWalkingTour &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
                 </footer>
             </div>
             <script src="<?php echo base_url("assets/js/jquery.min.js"); ?>"></script>
-            <script src="<?php echo base_url("bootstrap/js/bootstrap.min.js"); ?>"></script>
+            <script src="<?php echo base_url("assets/bootstrap/js/bootstrap.min.js"); ?>"></script>
             <script src="<?php echo base_url("assets/js/holder.min.js"); ?>"></script>
             <script src="<?php echo base_url("assets/js/ie10-viewport-bug-workaround.js"); ?>"></script>
             <script src="<?php echo base_url("assets/js/wow.min.js"); ?>"></script>
