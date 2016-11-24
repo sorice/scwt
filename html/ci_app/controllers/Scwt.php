@@ -26,7 +26,7 @@ class Scwt extends CI_Controller {
 
         // stories
         $this->load->model("stories_model");
-        $stories = $this->stories_model->get_stories();
+        $stories = $this->stories_model->get_stories(3);
         $view_context['stories'] = $stories;
 
         // friends

@@ -23,7 +23,6 @@ class Friends_model extends CI_Model {
             $query = $this->db->get($this->table_name, $limit);
         }
         else {
-            // load all data for admin
             $query = $this->db->get($this->table_name);
         }
 
