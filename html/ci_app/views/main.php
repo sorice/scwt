@@ -144,39 +144,32 @@
         </div>
         <?php
             if (isset($friends)) {
-                $i = 0;
-                foreach ($friends as $s) {
-                    $image_properties = array(
-                        'src'    => $s['image'],
-                        'alt'    => 'Friend image',
-                        'class'  => 'img-responsive img-thumbnail',
-                        'width'  => '200',
-                        'height' => '200'
-                    );
-                    echo "<div class='row featurette'>
-                        <div class='container'>
-                            <div class='col-sm-3 text-center'>".
-                                img($image_properties) ."
-                            </div>
-                            <div class='col-sm-9'>
-                                <blockquote>
-                                    <p><em>'". $s['opinion'] ."'</em></p>
-                                    <small><cite title='author'>". $s['author'] ."</cite></small>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>";
+                $image_properties = array(
+                    'src'    => $friends['image'],
+                    'alt'    => 'Friend image',
+                    'class'  => 'img-responsive img-thumbnail',
+                    'width'  => '200',
+                    'height' => '200'
+                );
 
-                    // update style marker
-                    $i += 1;
-                    if ($i < count($friends)) {
-                        echo "<div class='row'>
-                            <div class='container'>
-                                <hr />
-                            </div>
-                        </div>";
-                    }
-                }
+                echo "<div class='row featurette'>
+                    <div class='container'>
+                        <div class='col-sm-3 text-center'>".
+                            img($image_properties) ."
+                        </div>
+                        <div class='col-sm-9'>
+                            <blockquote>
+                                <p><em>'". $friends['opinion'] ."'</em></p>
+                                <small><cite title='author'>". $friends['author'] ."</cite></small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='container'>
+                        <hr />
+                    </div>
+                </div>";
             }
         ?>
     </div>

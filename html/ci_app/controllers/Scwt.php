@@ -25,34 +25,14 @@ class Scwt extends CI_Controller {
         $view_context['overview_img_tours'] = $this->staticimages_model->overview_img_tours;
 
         // stories
-        $stories = array();
-        $query = $this->db->select('id, title, summary, cover_image')->from('stories')->limit(3)->get();
-
-        foreach($query->result() as $row) {
-            $stories[] = array(
-                'id' => $row->id,
-                'title' => $row->title,
-                'summary' => $row->summary,
-                'cover_image' => $row->cover_image
-            );
-        }
+        $this->load->model("stories_model");
+        $stories = $this->stories_model->get_stories();
         $view_context['stories'] = $stories;
 
         // friends
-        // update using random_element($array) in array_helper
-        // up to 3
-        $friends = array();
-        $query = $this->db->select('image, opinion, author')->from('friends')->limit(3)->get();
-
-        foreach($query->result() as $row) {
-            $friends[] = array(
-                'image' => $row->image,
-                'opinion' => $row->opinion,
-                'author' => $row->author
-            );
-        }
+        $this->load->model("friends_model");
+        $friends = $this->friends_model->get_friends();
         $view_context['friends'] = $friends;
-
 
         // general view's contexts
         // page title
