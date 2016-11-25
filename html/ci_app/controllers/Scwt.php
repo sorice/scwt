@@ -31,7 +31,7 @@ class Scwt extends CI_Controller {
 
         // friends
         $this->load->model("friends_model");
-        $friends = $this->friends_model->get_friends();
+        $friends = $this->friends_model->get_random_opinion();
         $view_context['friends'] = $friends;
 
         // general view's contexts
@@ -63,17 +63,8 @@ class Scwt extends CI_Controller {
         $view_context['transport_summary'] = $this->statictext_model->transport;
 
         // transports
-        $transports = array();
-        $query = $this->db->select('id, cover_image, name, description')->from('transport')->get();
-
-        foreach($query->result() as $row) {
-            $transports[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'description' => $row->description
-            );
-        }
+        $this->load->model("transport_model");
+        $transports = $this->transport_model->get_transports();
         $view_context['transports'] = $transports;
 
         // general view's contexts
@@ -106,18 +97,8 @@ class Scwt extends CI_Controller {
 
         // accommodations
         $accommodations = array();
-        $query = $this->db->select('id, cover_image, name, english_name, price, description')->from('accommodation')->get();
-
-        foreach($query->result() as $row) {
-            $accommodations[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'english_name' => $row->english_name,
-                'price' => $row->price,
-                'description' => $row->description
-            );
-        }
+        $this->load->model("accommodation_model");
+        $accommodations = $this->accommodation_model->get_accommodations();
         $view_context['accommodations'] = $accommodations;
 
         // general view's contexts
@@ -150,17 +131,8 @@ class Scwt extends CI_Controller {
 
         // tours
         $tours = array();
-        $query = $this->db->select('id, cover_image, name, description, brochure')->from('tours')->get();
-
-        foreach($query->result() as $row) {
-            $tours[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'description' => $row->description,
-                'brochure' => $row->brochure
-            );
-        }
+        $this->load->model("tours_model");
+        $tours = $this->tours_model->get_tours();
         $view_context['tours'] = $tours;
 
         // general view's contexts

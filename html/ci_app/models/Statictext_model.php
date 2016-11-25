@@ -20,12 +20,8 @@ class StaticText_model extends CI_Model {
     public $accommodation;
     public $tours;
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
-
-        // make database available using $this->db in all methods
-        $this->load->database();
 
         // load data since this is a one row table
         $query = $this->db->get($this->table_name);
@@ -50,8 +46,7 @@ class StaticText_model extends CI_Model {
         $this->tours = $row->tours;
     }
 
-    public function update($data)
-    {
+    public function update($data) {
         if(count($data)) {
             $this->id = $data['id'];
             $this->overview = $data['overview'];

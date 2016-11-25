@@ -7,14 +7,19 @@ class Friends_model extends CI_Model {
     public $opinion;
     public $author;
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
+    }
 
-        // make database available using $this->db in all methods
-        $this->load->database();
+    public function get_random_opinion() {
+        // select last 10 entries
+        $query = $this->db->get($this->table_name, '10');
+        // get random order
+        $this->db->order_by('id', 'RANDOM');
 
-        // use method get_friends to obtain an array of stories to process
+        // randomize even more
+        $this->load->helper('array');
+        return random_element($query->result_array());
     }
 
     public function get_friends($limit = 0) {
@@ -26,13 +31,11 @@ class Friends_model extends CI_Model {
             $query = $this->db->get($this->table_name);
         }
 
-        $result = array();
-        foreach ($query->result_array() as $row) {
-            $result[] = $row;
-        }
+        // $result = array();
+        // foreach ($query->result_array() as $row) {
+        //     $result[] = $row;
+        // }
 
-        // return random item
-        $this->load->helper('array');
-        return random_element($result);
+        return $query->result_array();
     }
 }
