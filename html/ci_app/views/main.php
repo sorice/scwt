@@ -12,7 +12,7 @@
         </div>
         <hr class="featurette-divider">
         <div class="container section-container" id="overview">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $overview_img_welcome,
@@ -21,13 +21,15 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($overview_img_welcome) .'" rel="prettyPhoto[overview]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Welcome</h2>
                 <p class="lead-small"><?php if (isset($overview_welcome)) echo $overview_welcome; else echo "Welcome"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/tours#welcome_day" role="button"><i class="fa fa-flag">&nbsp;</i>Reception &raquo;</a></p>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $overview_img_transport,
@@ -36,13 +38,15 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($overview_img_transport) .'" rel="prettyPhoto[overview]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Transportation</h2>
                 <p class="lead-small"><?php if (isset($overview_transport)) echo $overview_transport; else echo "Transportation"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/transport" role="button"><i class="fa fa-truck">&nbsp;</i>Taxis &raquo;</a></p>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $overview_img_accommodation,
@@ -51,13 +55,15 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($overview_img_accommodation) .'" rel="prettyPhoto[overview]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Accommodation</h2>
                 <p class="lead-small"><?php if (isset($overview_accommodation)) echo $overview_accommodation; else echo "Accommodation"; ?></p>
                 <p><a class="btn lead-small" href="<?php echo site_url() ?>/accommodation" role="button"><i class="fa fa-home">&nbsp;</i>Casa Particular &raquo;</a></p>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $overview_img_tours,
@@ -66,7 +72,9 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($overview_img_tours) .'" rel="prettyPhoto[overview]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Tours</h2>
                 <p class="lead-small"><?php if (isset($overview_tours)) echo $overview_tours; else echo "Tours"; ?></p>
@@ -100,8 +108,10 @@
                                     <h2 class='featurette-heading'>". $s['title'] ."</h2>
                                     <p class='lead'>". $s['summary'] ."</p>
                                 </div>
-                                <div class='col-sm-5'>".
-                                img($image_properties) ."
+                                <div class='col-sm-5 gallery'>
+                                    <a href='". base_url($s['cover_image']) ."' rel='prettyPhoto[s". $s['id'] ."]'>".
+                                        img($image_properties) ."
+                                    </a>
                                 </div>
                             </div>
                         </div>";
@@ -113,8 +123,10 @@
                                     <h2 class='featurette-heading'>". $s['title'] ."</h2>
                                     <p class='lead'>". $s['summary'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>".
-                                img($image_properties) ."
+                                <div class='col-sm-5 col-sm-pull-7 gallery'>
+                                    <a href='". base_url($s['cover_image']) ."' rel='prettyPhoto[s". $s['id'] ."]'>".
+                                        img($image_properties) ."
+                                    </a>
                                 </div>
                             </div>
                         </div>";
@@ -154,8 +166,10 @@
 
                 echo "<div class='row featurette'>
                     <div class='container'>
-                        <div class='col-sm-3 text-center'>".
-                            img($image_properties) ."
+                        <div class='col-sm-3 gallery'>.
+                            <a href='". base_url($friends['image']) ."' rel='prettyPhoto[f". $friends['id'] ."]'>".
+                                img($image_properties) ."
+                            </a>
                         </div>
                         <div class='col-sm-9'>
                             <blockquote>

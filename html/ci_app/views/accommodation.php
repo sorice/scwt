@@ -30,8 +30,10 @@
                                     &nbsp;&nbsp;&dash;Price: ". $a['price'] ."<br/>
                                     ". $a['description'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>".
-                                img($image_properties) ."
+                                <div class='col-sm-5 col-sm-pull-7 gallery'>
+                                    <a href='". base_url($a['cover_image']) ."' rel='prettyPhoto[a". $a['id'] ."]'>".
+                                        img($image_properties) ."
+                                    </a>
                                 </div>
                             </div>
                         </div>";

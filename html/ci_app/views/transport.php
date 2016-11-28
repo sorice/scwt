@@ -27,8 +27,10 @@
                                     <h2 class='featurette-heading'>". $t['name'] ."</h2>
                                     <p class='lead'>". $t['description'] ."</p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>".
-                                img($image_properties) ."
+                                <div class='col-sm-5 col-sm-pull-7 gallery'>
+                                    <a href='". base_url($t['cover_image']) ."' rel='prettyPhoto[t". $t['id'] ."]'>".
+                                        img($image_properties) ."
+                                    </a>
                                 </div>
                             </div>
                         </div>";

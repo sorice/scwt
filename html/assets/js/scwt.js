@@ -23,3 +23,19 @@ $('#btn_send').click(function() {
         $('#form_message').submit();
     }
 });
+
+$(document).ready(function(){
+    $("area[rel^='prettyPhoto']").prettyPhoto();
+
+    $(".gallery a[rel^='prettyPhoto']").prettyPhoto({
+        animation_speed:'normal',
+        theme:'light_square',
+        slideshow:3000,
+        //autoplay_slideshow: true,
+        opacity: 0.95,
+        show_title: false,
+        theme: 'facebook',
+        hideflash: true,
+        social_tools: false
+    });
+});
