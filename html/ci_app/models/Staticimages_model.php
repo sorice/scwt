@@ -11,12 +11,8 @@ class StaticImages_model extends CI_Model {
     public $contact_img_abel;
     public $contact_img_jane;
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
-
-        // make database available using $this->db in all methods
-        $this->load->database();
 
         // load data since this is a one row table
         $query = $this->db->get($this->table_name);
@@ -32,8 +28,7 @@ class StaticImages_model extends CI_Model {
         $this->contact_img_jane = $row->contact_img_jane;
     }
 
-    public function update($data)
-    {
+    public function update($data) {
         if(count($data)) {
             $this->id = $data["id"];
 

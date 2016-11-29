@@ -25,34 +25,14 @@ class Scwt extends CI_Controller {
         $view_context['overview_img_tours'] = $this->staticimages_model->overview_img_tours;
 
         // stories
-        $stories = array();
-        $query = $this->db->select('id, title, summary, cover_image')->from('stories')->limit(3)->get();
-
-        foreach($query->result() as $row) {
-            $stories[] = array(
-                'id' => $row->id,
-                'title' => $row->title,
-                'summary' => $row->summary,
-                'cover_image' => $row->cover_image
-            );
-        }
+        $this->load->model("stories_model");
+        $stories = $this->stories_model->get_stories(3);
         $view_context['stories'] = $stories;
 
         // friends
-        // update using random_element($array) in array_helper
-        // up to 3
-        $friends = array();
-        $query = $this->db->select('image, opinion, author')->from('friends')->limit(3)->get();
-
-        foreach($query->result() as $row) {
-            $friends[] = array(
-                'image' => $row->image,
-                'opinion' => $row->opinion,
-                'author' => $row->author
-            );
-        }
+        $this->load->model("friends_model");
+        $friends = $this->friends_model->get_random_opinion();
         $view_context['friends'] = $friends;
-
 
         // general view's contexts
         // page title
@@ -83,17 +63,8 @@ class Scwt extends CI_Controller {
         $view_context['transport_summary'] = $this->statictext_model->transport;
 
         // transports
-        $transports = array();
-        $query = $this->db->select('id, cover_image, name, description')->from('transport')->get();
-
-        foreach($query->result() as $row) {
-            $transports[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'description' => $row->description
-            );
-        }
+        $this->load->model("transport_model");
+        $transports = $this->transport_model->get_transports();
         $view_context['transports'] = $transports;
 
         // general view's contexts
@@ -126,18 +97,8 @@ class Scwt extends CI_Controller {
 
         // accommodations
         $accommodations = array();
-        $query = $this->db->select('id, cover_image, name, english_name, price, description')->from('accommodation')->get();
-
-        foreach($query->result() as $row) {
-            $accommodations[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'english_name' => $row->english_name,
-                'price' => $row->price,
-                'description' => $row->description
-            );
-        }
+        $this->load->model("accommodation_model");
+        $accommodations = $this->accommodation_model->get_accommodations();
         $view_context['accommodations'] = $accommodations;
 
         // general view's contexts
@@ -170,17 +131,8 @@ class Scwt extends CI_Controller {
 
         // tours
         $tours = array();
-        $query = $this->db->select('id, cover_image, name, description, brochure')->from('tours')->get();
-
-        foreach($query->result() as $row) {
-            $tours[] = array(
-                'id' => $row->id,
-                'cover_image' => $row->cover_image,
-                'name' => $row->name,
-                'description' => $row->description,
-                'brochure' => $row->brochure
-            );
-        }
+        $this->load->model("tours_model");
+        $tours = $this->tours_model->get_tours();
         $view_context['tours'] = $tours;
 
         // general view's contexts

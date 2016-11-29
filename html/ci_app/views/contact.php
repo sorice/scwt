@@ -10,7 +10,7 @@
     </div>
     <div class="container">
         <div class="row section-container">
-            <div class="col-sm-4">
+            <div class="col-sm-4 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $contact_img_yanet,
@@ -18,13 +18,15 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($contact_img_yanet) .'" rel="prettyPhoto[contact]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Yanet</h2>
                 <p class="lead-small"><?php if (isset($contact_info_yanet)) echo $contact_info_yanet; else echo "Yanet"; ?></p>
                 <p></p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $contact_img_abel,
@@ -32,13 +34,15 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($contact_img_abel) .'" rel="prettyPhoto[contact]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Abel</h2>
                 <p class="lead-small"><?php if (isset($contact_info_abel)) echo $contact_info_abel; else echo "Abel"; ?></p>
                 <p></p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 gallery">
                 <?php
                     $image_properties = array(
                         'src'    => $contact_img_jane,
@@ -46,7 +50,9 @@
                         'width'  => '256',
                         'height' => '256'
                     );
+                    echo '<a href="'. base_url($contact_img_jane) .'" rel="prettyPhoto[contact]">';
                     echo img($image_properties);
+                    echo '</a>';
                 ?>
                 <h2>Jane</h2>
                 <p class="lead-small"><?php if (isset($contact_info_jane)) echo $contact_info_jane; else echo "Jane"; ?></p>
@@ -73,7 +79,7 @@
                             <a href="http://facebook.com/santaclarawalkingtour"><span class="fa fa-facebook-square fa-2x"></span></a>
                         </li>
                         <li class="twitter">
-                            <a href="http://twitter.com/santaclarawalkingtour"><span class="fa fa-twitter-square fa-2x"></span></a>
+                            <a href="http://twitter.com/scwalkingtour"><span class="fa fa-twitter-square fa-2x"></span></a>
                         </li>
                         <li class="gplus">
                             <a href="http://plus.google.com/santaclarawalkingtour"><span class="fa fa-google-plus-square fa-2x"></span></a>

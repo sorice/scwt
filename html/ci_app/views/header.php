@@ -16,6 +16,7 @@
         <link href="<?php echo base_url("assets/css/scwt.css"); ?>" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url("assets/css/animate.css"); ?>" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url("assets/font-awesome/font-awesome.css"); ?>" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url("assets/prettyPhoto/css/prettyPhoto.css"); ?>" rel="stylesheet" type="text/css">
     </head>
 <body>
     <div class="container">

@@ -28,8 +28,10 @@
                                     <p class='lead'>". $t['description'] ."</p>
                                     <p><a class='btn lead-small' href='". base_url($t['brochure']) ."' role='button'><i class='fa fa-file-pdf-o'>&nbsp;</i>Read brochure »</a></p>
                                 </div>
-                                <div class='col-sm-5 col-sm-pull-7'>".
-                                img($image_properties) ."
+                                <div class='col-sm-5 col-sm-pull-7 gallery'>
+                                    <a href='". base_url($t['cover_image']) ."' rel='prettyPhoto[t". $t['id'] ."]'>".
+                                        img($image_properties) ."
+                                    </a>
                                 </div>
                             </div>
                         </div>";
