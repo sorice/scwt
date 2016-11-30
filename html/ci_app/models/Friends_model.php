@@ -12,13 +12,13 @@ class Friends_model extends CI_Model {
     }
 
     public function get_random_opinion() {
+        // set random order
+        $this->db->order_by('id', 'RANDOM');
         // select last 10 entries
         $query = $this->db->get($this->table_name, '10');
-        // get random order
-        $this->db->order_by('id', 'RANDOM');
-
         // randomize even more
         $this->load->helper('array');
+
         return random_element($query->result_array());
     }
 

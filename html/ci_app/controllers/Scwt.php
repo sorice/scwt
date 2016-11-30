@@ -42,6 +42,8 @@ class Scwt extends CI_Controller {
         $nav_context['brand_link'] = site_url();
         // show random carousel
         $carousel_context = array();
+        // carousel images
+        $carousel_context['carousel'] = $this->get_carousel_images_helper();
         // contact info
         $contact_context = $this->get_contact_info_helper();
 
@@ -75,6 +77,8 @@ class Scwt extends CI_Controller {
         $nav_context['brand_link'] = site_url();
         // show random carousel
         $carousel_context = array();
+        // carousel images
+        $carousel_context['carousel'] = $this->get_carousel_images_helper();
         // contact info
         $contact_context = $this->get_contact_info_helper();
 
@@ -109,6 +113,8 @@ class Scwt extends CI_Controller {
         $nav_context['brand_link'] = site_url();
         // show random carousel
         $carousel_context = array();
+        // carousel images
+        $carousel_context['carousel'] = $this->get_carousel_images_helper();
         // contact info
         $contact_context = $this->get_contact_info_helper();
 
@@ -143,6 +149,8 @@ class Scwt extends CI_Controller {
         $nav_context['brand_link'] = site_url();
         // show random carousel
         $carousel_context = array();
+        // carousel images
+        $carousel_context['carousel'] = $this->get_carousel_images_helper();
         // contact info
         $contact_context = $this->get_contact_info_helper();
 
@@ -175,6 +183,13 @@ class Scwt extends CI_Controller {
         $result['contact_img_jane'] = $this->staticimages_model->contact_img_jane;
 
         return $result;
+    }
+
+    private function get_carousel_images_helper() {
+        // carousel images
+        $this->load->model("carousel_model");
+
+        return $this->carousel_model->get_random_images();
     }
 }
 
