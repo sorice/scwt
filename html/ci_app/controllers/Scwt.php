@@ -164,6 +164,9 @@ class Scwt extends CI_Controller {
 
     // helpers
     private function get_contact_info_helper() {
+        // load helper
+        $this->load->helper('form');
+
         // contact info
         $result = array();
 

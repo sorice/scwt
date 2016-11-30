@@ -91,6 +91,13 @@ a {
     padding-top: 30px;
 }
 
+.error {
+    color: red;
+    float: left;
+    font-variant: small-caps;
+    margin-left: 5px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .carousel {
