@@ -9,6 +9,8 @@ $route['default_controller'] = 'scwt';
 $route['transport'] = 'scwt/transport';
 $route['accommodation'] = 'scwt/accommodation';
 $route['tours'] = 'scwt/tours';
+$route['send_message'] = 'scwt/send_message';
+$route['verify_message/(:any)'] = 'scwt/verify_message';
 
 // backend routes
 $route['admin'] = 'admin';

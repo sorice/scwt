@@ -1,4 +1,5 @@
-//SmothScroll
+$(document).ready(function(){
+    //SmothScroll
 $('a[href*=#]').click(function() {
     if (this.hash == "#carousel1") {return true;}
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -13,18 +14,50 @@ $('a[href*=#]').click(function() {
     }
 });
 
-// send message
-$('#btn_send').click(function() {
+// message form
+$("#form_message").on("submit", function() {
+    var error = false;
     // validate input data here and submit form
-    if (true) {
-        return false
+    if ($("#name").val().trim().length > 0) {
+        $("#name_error").addClass("hidden");
+        $("#name").val($("#name").val().trim());
     }
     else {
-        $('#form_message').submit();
+        $("#name").val("");
+        $("#name_error").removeClass("hidden");
+
+        error = true;
+    }
+    if ($("#email").val().trim().length > 0) {
+        $("#email_error").addClass("hidden");
+        $("#email").val($("#email").val().trim());
+    }
+    else {
+        $("#email").val("");
+        $("#email_error").removeClass("hidden");
+
+        error = true;
+    }
+    if ($("#message").val().trim().length > 0) {
+        $("#message_error").addClass("hidden");
+        $("#message").val($("#message").val().trim());
+    }
+    else {
+        $("#message").val("");
+        $("#message_error").removeClass("hidden");
+
+        error = true;
+    }
+
+    if (error) {
+        return false;
+    }
+    else {
+        return true;
     }
 });
 
-$(document).ready(function(){
+// prettyPhoto
     $("area[rel^='prettyPhoto']").prettyPhoto();
 
     $(".gallery a[rel^='prettyPhoto']").prettyPhoto({

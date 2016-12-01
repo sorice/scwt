@@ -1,32 +1,31 @@
 <?php
-class Friends_model extends CI_Model {
-    private $table_name = "friends";
+class Carousel_model extends CI_Model {
+    private $table_name = "carousel";
 
     public $id;
     public $image;
-    public $opinion;
-    public $author;
+    public $main_text;
+    public $secondary_text;
 
     public function __construct() {
         parent::__construct();
     }
 
-    public function get_random_opinion() {
+    public function get_random_images() {
+        // select all images
         // set random order
         $this->db->order_by('id', 'RANDOM');
-        // select last 10 entries
-        $query = $this->db->get($this->table_name, '10');
+        $query = $this->db->get($this->table_name);
 
         // randomize even more
         $result = $query->result_array();
         shuffle($result);
-        // select random element
-        $this->load->helper('array');
 
-        return random_element($result);
+        // return 3 items
+        return array_slice($query->result_array(), 0, 3);
     }
 
-    public function get_friends($limit = 0) {
+    public function get_images($limit = 0) {
         $query = 0;
         if ($limit) {
             $query = $this->db->get($this->table_name, $limit);
@@ -34,11 +33,6 @@ class Friends_model extends CI_Model {
         else {
             $query = $this->db->get($this->table_name);
         }
-
-        // $result = array();
-        // foreach ($query->result_array() as $row) {
-        //     $result[] = $row;
-        // }
 
         return $query->result_array();
     }
