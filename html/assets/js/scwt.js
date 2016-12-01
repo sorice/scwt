@@ -39,7 +39,7 @@ $("#form_message").on("submit", function() {
         error = true;
     }
     if ($("#message").val().trim().length > 0) {
-        $("#message_error").removeClass("hidden");
+        $("#message_error").addClass("hidden");
         $("#message").val($("#message").val().trim());
     }
     else {

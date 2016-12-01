@@ -2,8 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Scwt extends CI_Controller {
-    public function index()
-    {
+    public function index() {
         $view_context = array();
 
         // load index.php page data
@@ -55,8 +54,7 @@ class Scwt extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function transport()
-    {
+    public function transport() {
         $view_context = array();
 
         // static text
@@ -90,8 +88,7 @@ class Scwt extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function accommodation()
-    {
+    public function accommodation() {
         $view_context = array();
 
         // static text
@@ -126,8 +123,7 @@ class Scwt extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function tours()
-    {
+    public function tours() {
         $view_context = array();
 
         // static text
@@ -160,6 +156,77 @@ class Scwt extends CI_Controller {
         $this->load->view('tours', $view_context);
         $this->load->view('contact', $contact_context);
         $this->load->view('footer');
+    }
+
+    public function send_message() {
+        $view_context = array();
+
+        $this->load->library('user_agent');
+
+        $this->load->model('contactus_model');
+
+        if(count($this->input->post())) {
+            // load array helper
+            $this->load->helper('array');
+            // using elements from array helper to extract data from post
+            $items = array(
+                "name", "email", "message"
+            );
+
+            // insert new message
+            $result = $this->contactus_model->new_message(elements($items, $this->input->post()));
+
+            if($result) {
+                // send verification code
+                // $this->load->library('email');
+
+                // $this->email->from('your@example.com', 'Your Name');
+                // $this->email->to('someone@example.com');
+                // $this->email->cc('another@another-example.com');
+                // $this->email->bcc('them@their-example.com');
+                // $this->email->subject('Email Test');
+                // $this->email->message('Testing the email class.');
+                // $this->email->send();
+
+                // $this->load->library('email');
+                // $this->email->from('sender@example.com', 'Sender Name');
+                // $this->email->to('recipient@example.com','Recipient Name');
+                // $this->email->subject('Your Subject');
+                // $this->email->message('Your Message');
+                // try {
+                //     $this->email->send();
+                //     echo 'Message has been sent.';
+                // }
+                // catch (Exception $e) {
+                //     echo $e->getMessage();
+                // }
+
+                $view_context['data_saved'] = "Your message have been saved. "
+                    . "We sent you an email with a verification code, please check "
+                    . "your inbox and confirm you message following the link. Thank you.";
+            }
+            else {
+                $error_msg = $this->db->error()['message'];
+                $view_context['errors'] = "Operation failed, please try again. Error: ". $error_msg;
+            }
+
+            $view_context['referrer'] = $this->agent->referrer();
+            // general view's contexts
+            $header_context = array();
+            $this->load->view('header', $header_context);
+            $this->load->view('message', $view_context);
+        }
+        else {
+            redirect("/");
+        }
+    }
+
+    public function verify_message($key) {
+        $view_context = array();
+
+        echo $key;
+
+        // use here a captcha image to verify HUMAN ACTION
     }
 
     // helpers

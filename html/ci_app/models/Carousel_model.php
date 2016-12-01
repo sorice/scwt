@@ -18,8 +18,10 @@ class Carousel_model extends CI_Model {
         $query = $this->db->get($this->table_name);
 
         // randomize even more
-        //$this->load->helper('array');
-        //return random_element($query->result_array());
+        $result = $query->result_array();
+        shuffle($result);
+
+        // return 3 items
         return array_slice($query->result_array(), 0, 3);
     }
 

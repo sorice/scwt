@@ -16,10 +16,14 @@ class Friends_model extends CI_Model {
         $this->db->order_by('id', 'RANDOM');
         // select last 10 entries
         $query = $this->db->get($this->table_name, '10');
+
         // randomize even more
+        $result = $query->result_array();
+        shuffle($result);
+        // select random element
         $this->load->helper('array');
 
-        return random_element($query->result_array());
+        return random_element($result);
     }
 
     public function get_friends($limit = 0) {
